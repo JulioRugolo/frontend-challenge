@@ -204,3 +204,61 @@
     left: 630px;  
   }
   
+  .otherCourses_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1136px;
+    color: white;
+    margin-top: 20px;
+  }
+
+  .inlineBlock {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .courseDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 368px;
+    height: 188px;
+    background-size: cover;
+    opacity: 0.5;
+  }
+
+  .courseDiv:hover {
+    opacity: 1;
+  }
+
+  .courseInfoDiv {
+    display: flex;
+    flex-direction: column;
+    width: 368px;
+    height: 188px;
+    justify-content: flex-end;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  
+  .courseInfoDiv h4{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+  }
+
+  .courseInfoDiv p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #858479;
+  }
+
+  .courseInfoDiv p span {
+    color: white;
+  }
