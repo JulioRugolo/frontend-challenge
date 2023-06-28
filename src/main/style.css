@@ -747,7 +747,7 @@ footer {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 1000px) {
   *{
     margin: 0;
     padding: 0;
@@ -955,6 +955,10 @@ footer {
   .exclusive-info img {
     width: 32px;
     height: 32px;
+  }
+  .collumn_container, .otherCourses_container,
+  .collumn_container, .related-article, form, .success-container, footer {
+    display: none;
   }
 }
 
