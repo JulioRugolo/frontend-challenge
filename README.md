@@ -1,55 +1,70 @@
+
 # Front end Challenge 20200912
 Desafio técnico para oportunidade de Pessoa Front-End (HTML / CSS / JS).
 
+## Description
 
-# README - Instalação do Projeto
+Projeto desenvolvido a partir de um protótipo do figma, utilizando HTML, CSS e JavaScript, tudo conteinerizado com Docker.
 
-Bem-vindo ao README do projeto! Este documento fornecerá instruções detalhadas sobre como instalar e configurar o projeto em seu ambiente local. Siga as etapas abaixo para começar.
+## Installation
 
-## Pré-requisitos
+### English
 
-Certifique-se de ter os seguintes pré-requisitos instalados em seu sistema:
+To run this project locally, follow these steps:
 
-- [Node.js](https://nodejs.org) (versão 10 ou superior)
-- [Git](https://git-scm.com/)
+1. Clone the repository:
 
-## Instruções de Instalação
-
-1. Clone o repositório
-
-   ```
-   git clone git@github.com:<SEU-USUARIO>/frontend-challenge.git
+   ```bash
+   git clone [repository_url]
    ```
 
-2. Navegue até o diretório do projeto
+2. Navigate to the project folder:
 
-   ```
-   cd nome-do-repositorio
-   ```
-
-3. Instale as dependências do projeto
-
-   ```
-   npm install
+   ```bash
+   cd frontend-challenge
    ```
 
+3. Run the Docker Compose command to start the project:
 
-4. Execução
+   ```bash
+   docker-compose up -d
+   ```
 
-   - Inicie o servidor
+   This command will build and start the necessary containers defined in the `docker-compose.yml` file in detached mode (`-d`). Make sure you have Docker and Docker Compose installed on your system.
 
-     ```
-     npm start
-     ```
+4. Access the application in your web browser:
 
-   - Após a execução bem-sucedida, o projeto estará disponível em `http://localhost:9004`. 
+   ```
+   http://localhost:9004
+   ```
 
-## Comandos Disponíveis
 
-Aqui estão alguns comandos úteis que você pode executar dentro do diretório do projeto:
+### Português
 
-- `npm start`: Inicia o servidor.
-- `npm dev`: Inicia o servidor em modo de desenvolvimento.
-- `npm run build`: Compila e gera uma versão otimizada do projeto para produção.
-- `npm test`: Executa os testes automatizados.
-- `npm run lint`: Executa a verificação de linting no código.
+Para executar este projeto localmente, siga os seguintes passos:
+
+1. Clone o repositório:
+
+   ```bash
+   git clone [repository_url]
+   ```
+
+2. Acesse a pasta do projeto:
+
+   ```bash
+   cd frontend-challenge
+   ```
+
+3. Execute o comando Docker Compose para iniciar o projeto:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   Este comando irá construir e iniciar os containers necessários definidos no arquivo `docker-compose.yml` em modo detached (`-d`). Certifique-se de ter o Docker e o Docker Compose instalados em seu sistema.
+
+4. Acesse a aplicação em seu navegador web:
+
+   ```
+   http://localhost:9004
+   ```
