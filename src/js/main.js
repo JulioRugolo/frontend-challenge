@@ -6,6 +6,27 @@ const loginContainer = document.getElementById('loginContainer');
 const submitBtn = document.getElementById('submit-btn');
 let menuBarVisible = false;
 
+const user = JSON.parse(localStorage.getItem('user'));
+
+if (user) {
+  const registerLink = document.querySelector('a[href="./register.html"]');
+  const loginLink = document.querySelector('a[href="./login.html"]');
+  const navbar = document.querySelector('navbar');
+  
+  if (registerLink) {
+    navbar.removeChild(registerLink);
+  }
+  
+  if (loginLink) {
+    const userName = user.name;
+    const loginButton = loginLink.querySelector('p.navbar-item');
+    const aButton = document.getElementById('loginButton');
+    aButton.href = '#';
+    loginButton.innerHTML = `Hola, <span class='username'>${userName}
+    </span><img src='./img/down-outline.png'>`;
+  }
+}
+
 personBtn.addEventListener('click', () => {
     loginContainer.style.display = 'flex';
 });

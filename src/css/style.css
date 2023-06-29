@@ -4,6 +4,9 @@
 }
 
 a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: #858479;
 }
@@ -81,6 +84,17 @@ navbar {
 
 #menu-bar{
   display: none;
+}
+
+.navbar-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  color: white;
+  font-weight: 700;
 }
 
 .navbar-item:hover {
