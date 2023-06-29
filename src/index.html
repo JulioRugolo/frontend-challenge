@@ -114,10 +114,12 @@
         </div>
 
     </section>
- <!-- RESPONSIVENESS DONE UP TO THIS POINT -->
+
     <section class="collumn_container section">
         <div>
             <h2 class="titleLessonContainer">LESSON PLAN</h2>
+            <h3 class="titleLessonContainerMobile">DESTAQUES del curso</h3>
+            
         </div>
         <div class="whiteContainer">
             <div class="lessonDiv">
@@ -125,7 +127,7 @@
                     <h1>01</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>PRESENTACION</h>
+                    <h3>PRESENTACION</h3>
                     <p>
                         Mireia, nuestra campeona, te da la bienvenida al curso que te llevará a la cima de la natación.
                         Conocerás su técnica, su entrenamiento y muchas cosas más de la mano de un equipo de profesionales
@@ -139,7 +141,7 @@
                     <h1>02</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>NATACIÓN: ASPECTOS GENERALES</h>
+                    <h3>NATACIÓN: ASPECTOS GENERALES</h3>
                     <p>
                         Mireia es una luchadora. Su afán de superación y su preparación tanto física como mental la han llevado a lo más alto en un deporte que para ella es un estilo de vida. Conoce de la mano de nuestra deportista de élite los beneficios de esta disciplina.
                         
@@ -152,7 +154,7 @@
                     <h1>03</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>BASES BIOMECÁNICAS DE LA NATACIÓN</h>
+                    <h3>BASES BIOMECÁNICAS DE LA NATACIÓN</h3>
                     <p>
                         Mireia es una luchadora. Su afán de superación y su preparación tanto física como mental la han llevado a lo más alto en un deporte que para ella es un estilo de vida. Conoce de la mano de nuestra deportista de élite los beneficios de esta disciplina.
                     </p>
@@ -164,7 +166,7 @@
                     <h1>04</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>ESTILOS DE NATACIÓN</h>
+                    <h3>ESTILOS DE NATACIÓN</h3>
                     <p>
                         Una perfecta ejecución de estos estilos, unida al control y a la resistencia, te permitirá convertirte en un nadador interdisciplinar. Mireia y su equipo te enseñarán las claves y los secretos para dominarlos todos desde cero.
                     </p>
@@ -176,7 +178,7 @@
                     <h1>05</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>VIRAJES Y SALTOS</h>
+                    <h3>VIRAJES Y SALTOS</h3>
                     <p>
                         El manejo de los saltos y virajes mejorará considerablemente tu rendimiento y tu técnica de natación. Los profesionales de fama internacional que asisten a Mireia te enseñan a perfeccionar esta técnica.
                     </p>
@@ -186,8 +188,49 @@
                 <button class="buttonAll">VER TODOS</button>
             </div>
         </div>
+        <div class="whiteContainerMobile">
+            <div class="lessonDiv">
+                <div>
+                    <h1>03</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Bases biomecánicas de la natación</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="lessonDiv">
+                <div>
+                    <h1>06</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Preparación física</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="lessonDiv">
+                <div>
+                    <h1>08</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Nutrición y suplementos</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="lessonDiv">
+                <div>
+                    <h1>11</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Análisis de competición</h3>
+                </div>
+            </div>
+            <div class="divButton">
+                <button class="buttonAll">VER TODOS</button>
+                <button class="buttonAllMobile">VER TODOS</button>
+            </div>
+        </div>
     </section>
-    
+     <!-- RESPONSIVENESS DONE UP TO THIS POINT -->
     <section class="otherCourses_container section">
         <div>
             <h2>MÁS CURSOS</h2>
@@ -214,8 +257,8 @@
         </div>
     </section>
 
-    <section class="section_container section">
-        <div>
+    <section class="form_section">
+        <div class="form-section-title">
             <h2>OBTÉN MÁS INFORMACiÓN</h>
         </div>
         <form>
@@ -233,21 +276,20 @@
             <div class="containerCheckbox">
                 <label>
                     <input type="checkbox" name="terms" value="terms" class="custom-checkbox">
-                    <p>Acepto las <span>condiciones de uso</span> y <span>protección de datos.</span></p>
+                    <p class="checkbox-terms">Acepto las <span>condiciones de uso</span> y <span>protección de datos.</span></p>
                 </label>
                 <label>
                     <input type="checkbox" name="terms" value="terms" class="custom-checkbox">
-                    <p>Me gustaría recibir información sobre <br> nuevos cursos, ofertas y promociones</p>
+                    <p class="checkbox-terms">Me gustaría recibir información sobre <br> nuevos cursos, ofertas y promociones</p>
                 </label>
             </div>
         </form>
-        <div>
-            <button class="buttonMoreInfo">ENVIAR</button>
-        </div>
+
+            <button class="sendButton">ENVIAR</button>
 
     </section>
 
-    <section class="collumn_container section">
+    <section class="comment_section">
         <div>
             <h2 class="titleLessonContainer">COMENTARIOS DE LOS ESTUDIANTES</h2>
         </div>
@@ -365,6 +407,19 @@
         <span>
             Detrás de cada éxito, hay una história.
             conoce en nuestro blog.
+        </span>
+        <button class="blogButton">LEER MÁS EN NUESTRO BLOG</button>
+    </section>
+
+    <section class="success-container-mobile section">
+        <div class="success-title-mobile">
+            <img src="./img/star-outline.png" alt="Success">
+            <h4>
+                Los estudiantes le dan a Unycos una calificación promedio de 4.7 de 5 estrellas. 
+            </h4>
+        </div>
+        <span>
+            100% de garantía de satisfacción. 30 días de garantía de devolución de dinero.
         </span>
         <button class="blogButton">LEER MÁS EN NUESTRO BLOG</button>
     </section>
