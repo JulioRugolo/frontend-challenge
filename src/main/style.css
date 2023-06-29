@@ -1206,20 +1206,88 @@ footer {
     height: 40px;
     margin-top: 10px;
   }
-/* 
+
   .courseDiv{
     opacity: 1;
-  } */
+  }
+
+  .comment_section {
+    display: none;
+  }
+
+  .comment-section-mobile{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: white;
+  margin-top: 20px;
+  }
+
+  .titleLessonContainerMobile {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-family: Lato;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .statmentDiv{
+    position: relative;
+    width: 80%;
+    height: 144px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: #FFF;
+    color: #333333;
+    padding: 10px;
+  }
+
+  .statment-author {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: #000;
+    font-size: 12px;
+    font-family: Lato;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 4px 8px;
+  }
+  
+
+  .blackContainer {
+    flex-direction: row;
+    width: 100%;
+      width: 100%;
+      overflow-x: auto;
+  }
 
   .inlineBlock {
     width: 368px;
-    
     flex-direction: column;
   }
 
   .inlineBlock > .courseDiv:nth-child(2) {
     display: none;
   } 
+
+  .related-article{
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  hr {
+    margin-top: 10px;
+  }
+
+  .related-article-div{
+    flex-direction: column;
+    width: 90%;
+  }
   .form-section-title {
     color: white;
   }
