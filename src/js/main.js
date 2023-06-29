@@ -15,7 +15,7 @@ toggleIcon.addEventListener('click', (event) => {
         menuBar.style.display = 'flex';
         closeButton.style.display = 'flex';
         menuBarVisible = true;
-        event.stopPropagation(); // Impede que o evento de clique se propague para o document
+        event.stopPropagation();
     }
 });
 
