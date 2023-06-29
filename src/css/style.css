@@ -3,6 +3,31 @@
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+  color: #858479;
+}
+
+.up-arrow {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #555;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 9999;
+}
+
+.up-arrow.show {
+  display: flex;
+}
+
 body {
   background-color: black;
   display: flex;
@@ -10,6 +35,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Lato', sans-serif;
+  gap: 50px;
 }
 
 header {
@@ -22,6 +48,7 @@ header {
 }
 
 .logo {
+  position: absolute;
   width: 93.358px;
   height: 24px;
   flex-shrink: 0;
@@ -29,10 +56,11 @@ header {
 
 navbar {
   display: flex;
+  position: absolute;
+  right: 152px;
   flex-shrink: 0;
   color: var(--color-primary-dark-50, #858479);
   text-align: right;
-  /* Button 2 */
   font-size: 12px;
   font-family: Lato;
   font-weight: 700;
@@ -42,9 +70,27 @@ navbar {
   gap: 50px;
 }
 
+.form-section-title {
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+#toggle-button {
+  display: none;
+}
+
+#menu-bar{
+  display: none;
+}
+
 .navbar-item:hover {
   color: white;
   font-weight: 600;
+}
+
+.loginContainer{
+  display: none;
+  visibility: hidden;
 }
 
 .hero {
@@ -68,17 +114,31 @@ navbar {
   margin: 0 auto;
 }
 
-.heroCall div {
+.hero-call-mobile {
+  display: none;
+}
+
+.mobile-title {
+  display: none;
+}
+
+.hero-call-info {
   display: flex;
+  justify-self: flex-start;
+  justify-content: space-around;
   width: 100%;
+}
+
+.hero-call-info div {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  flex-direction: column;
 }
 
 
-.buttonMoreInfo {
+.buttonMoreInfo, .sendButton {
   display: flex;
   background-color: #C5AF19;
   justify-content: center;
@@ -107,7 +167,12 @@ navbar {
   border: 2px solid var(--color-neutral-5-grey-10, #F1F1F1);
 }
 
-.buttonMoreInfo:hover {
+.blogButton:hover{
+  background-color: white;
+  color: black;
+}
+
+.buttonMoreInfo:hover, .sendButton:hover {
   background-color: #E0D100;
   color: black;
 }
@@ -118,7 +183,6 @@ navbar {
   align-items: center;
   justify-content: center;
   color: white;
-  margin-top: 30px;
   width: 1136px;
   animation: fade-in 1s ease-out;
 }
@@ -132,7 +196,6 @@ navbar {
   width: 1136px;
   height: 320px;
   background-color: white;
-  margin: 20px;
 }
 
 .train-info {
@@ -151,7 +214,6 @@ navbar {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #1D1A05;
-  margin-top: 10px;
 }
 
 .train-to-exit p {
@@ -208,18 +270,21 @@ navbar {
   opacity: 1;
 }
 
-.collumn_container {
+.collumn_container, .form_section, .comment_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 1137px;
-  margin-top: 20px;
 }
 
 .titleLessonContainer {
   color: white;
   margin-top: 20px;
+}
+
+.titleLessonContainerMobile{
+  display: none;
 }
 
 .whiteContainer {
@@ -231,6 +296,10 @@ navbar {
   height: 805px;
   color: #858479;
   gap: 20px;
+}
+
+.whiteContainerMobile {
+  display: none;
 }
 
 .blackContainer {
@@ -352,12 +421,17 @@ hr {
   cursor: pointer;
 }
 
+.moreComments:hover {
+  background-color: #D8D7CE;
+  color: black;
+}
+
 .lessonDiv {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 912px;
+  width: 100%;
   height: 122px;
   z-index: 1;
 }
@@ -405,7 +479,7 @@ hr {
   align-items: center;
   width: 955px;
   height: 150px;
-  top: 1990px;
+  top: 2150px;
   position: absolute;
   z-index: 2;
 }
@@ -416,6 +490,9 @@ hr {
   border-radius: 4px;
   top: 2119px;
   left: 630px;
+}
+.buttonAllMobile {
+  display: none;
 }
 
 .buttonAll:hover {
@@ -429,9 +506,8 @@ hr {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 1136px;
+  width: 100%;
   color: white;
-  margin-top: 20px;
   opacity: 0;
   transition: opacity 1s ease-out;
 }
@@ -509,11 +585,16 @@ select {
   color: #858479;
 }
 
+.comment-section-mobile{
+  display: none;
+}
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .containerCheckbox {
@@ -556,7 +637,10 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+}
+
+.articles-hr{
+  display: none;
 }
 
 .related-article-div {
@@ -597,10 +681,14 @@ form {
   color: #858479;
 }
 
+.success-container-mobile{
+  display: none;
+}
+
 .success-container {
   display: flex;
   flex-direction: column;
-  width: 1440px;
+  width: 100%;
   height: 344px;
   align-items: center;
   justify-content: center;
@@ -609,7 +697,6 @@ form {
   background: url("../img/bestbg.png"), lightgray 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 30px;
 }
 
 .success-container p {
@@ -638,7 +725,7 @@ form {
   text-transform: uppercase;
 }
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   width: 1440px;
@@ -646,6 +733,15 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 30px;
+}
+
+.footer hr {
+  width: 480px;
+  
+}
+
+.footer-mobile {
+  display: none
 }
 
 .info-container {
@@ -699,32 +795,3 @@ footer {
   background-color: #555;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes scale-in {
-  from {
-    transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}

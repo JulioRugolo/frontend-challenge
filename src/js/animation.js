@@ -17,4 +17,16 @@ function handleIntersection(entries, observer) {
   sections.forEach(section => {
     observer.observe(section);
   });
+
+  if (window.innerWidth > 1000) {
+    window.addEventListener('scroll', function() {
+      var arrow = document.querySelector('.up-arrow');
+  
+      if (window.scrollY > 500) {
+        arrow.classList.add('show');
+      } else {
+        arrow.classList.remove('show');
+      }
+    });
+  }
   

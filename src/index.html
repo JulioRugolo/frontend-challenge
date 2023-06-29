@@ -4,38 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unyco Test Maquetación</title>
-    <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <meta name="description" content="Discover a range of courses covering sports, from physical training to advanced strategies. Learn from experts and enhance your sports skills to excel in both practice and theoretical knowledge. Find the perfect course to fuel your passion for sports and reach new levels of performance." />
+
 </head>
-<body>
-    <header>
+<body id="body">
+    <header id="header">
         <div class="logo">
             <img src="img/logo.png" alt="Logo Unyco">
         </div>
         <navbar>
-            <p class="navbar-item">CURSOS</p>
-            <p class="navbar-item">REGISTER</p>
+            <a href="#courses">
+                <p class="navbar-item">CURSOS</p>
+            </a>
+            <a href="#form">
+                <p class="navbar-item">REGISTER</p>
+            </a>
             <p class="navbar-item">LOG IN</p>
-            <img class="toggle" src="img/toggle.png" alt="Search Icon">
+            <a id="toggle-button">
+                <img id="toggle" src="img/toggle.png" alt="Toggle Icon">
+                <img id="person" src="img/person-outline.svg" alt="Profile Icon">
+            </a>
         </navbar>
-        
+        <div id="menu-bar">
+            <img src='./img/logoblack.png'>
+            <a id="close-button"><p>X</p></a>
+        </div>
+
     </header>
+    <a class="up-arrow" href="#header">
+        <img id="up-arrow" src="img/up-arrow.png" alt="Up Arrow">
+    </a>
     <div class="hero">
     </div>
     <section class="heroCall section">
-        <div>
-            <img src="img/icon-medal-alt.png" width="80px" height="80px" alt="Hero Call">
-            <p>12 MÓDULOS</p>
-        </div>
-        <div>
-            <img src="img/icon-medal-hour-alt.png" width="80px" height="80px" alt="Hero Call">
-            <p>+3.5 HORAS</p>
+        <div class="hero-call-info">
+            <div>
+                <img src="img/icon-medal-alt.png" width="80px" height="80px" alt="Hero Call">
+                <p>12 MÓDULOS</p>
+            </div>
+            <div>
+                <img src="img/icon-medal-hour-alt.png" width="80px" height="80px" alt="Hero Call">
+                <p>+3.5 HORAS</p>
+            </div>
         </div>
         <div>
             <button class="buttonMoreInfo">MAS INFORMACION</button>
         </div>
+    </section>
+    <section class="hero-call-mobile section">
+        <div class="mobile-title">
+            <h1>MIREIA BELMONTE</h1>
+            <h2>enseña natación</h2>
+            <button class="buttonMoreInfoMobile">
+                SOLICITAR INFORMACIÓN
+            </button>
+        </div>
+        <div class="hero-call-info">
+            <div>
+                <img src="img/icon-medal-alt.png" width="80px" height="80px" alt="Hero Call">
+                <p>12 MÓDULOS</p>
+            </div>
+            <div>
+                <img src="img/icon-medal-hour-alt.png" width="80px" height="80px" alt="Hero Call">
+                <p>+3.5 HORAS</p>
+            </div>
+        </div>
+        <div>
+            <h3 class="hero-call-mobile-subtitle">APRENDE natación con unacampeona olímpica</h3>
+        </div>
+        <button class="hero-mobile-button">Preguntas Frecuentes</button>
     </section>
 
     <section class="section_container section">
@@ -91,6 +134,8 @@
     <section class="collumn_container section">
         <div>
             <h2 class="titleLessonContainer">LESSON PLAN</h2>
+            <h3 class="titleLessonContainerMobile">DESTAQUES del curso</h3>
+            
         </div>
         <div class="whiteContainer">
             <div class="lessonDiv">
@@ -98,7 +143,7 @@
                     <h1>01</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>PRESENTACION</h>
+                    <h3>PRESENTACION</h3>
                     <p>
                         Mireia, nuestra campeona, te da la bienvenida al curso que te llevará a la cima de la natación.
                         Conocerás su técnica, su entrenamiento y muchas cosas más de la mano de un equipo de profesionales
@@ -112,7 +157,7 @@
                     <h1>02</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>NATACIÓN: ASPECTOS GENERALES</h>
+                    <h3>NATACIÓN: ASPECTOS GENERALES</h3>
                     <p>
                         Mireia es una luchadora. Su afán de superación y su preparación tanto física como mental la han llevado a lo más alto en un deporte que para ella es un estilo de vida. Conoce de la mano de nuestra deportista de élite los beneficios de esta disciplina.
                         
@@ -125,7 +170,7 @@
                     <h1>03</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>BASES BIOMECÁNICAS DE LA NATACIÓN</h>
+                    <h3>BASES BIOMECÁNICAS DE LA NATACIÓN</h3>
                     <p>
                         Mireia es una luchadora. Su afán de superación y su preparación tanto física como mental la han llevado a lo más alto en un deporte que para ella es un estilo de vida. Conoce de la mano de nuestra deportista de élite los beneficios de esta disciplina.
                     </p>
@@ -137,7 +182,7 @@
                     <h1>04</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>ESTILOS DE NATACIÓN</h>
+                    <h3>ESTILOS DE NATACIÓN</h3>
                     <p>
                         Una perfecta ejecución de estos estilos, unida al control y a la resistencia, te permitirá convertirte en un nadador interdisciplinar. Mireia y su equipo te enseñarán las claves y los secretos para dominarlos todos desde cero.
                     </p>
@@ -149,7 +194,7 @@
                     <h1>05</h1>
                 </div>
                 <div class="infoDiv">
-                    <h3>VIRAJES Y SALTOS</h>
+                    <h3>VIRAJES Y SALTOS</h3>
                     <p>
                         El manejo de los saltos y virajes mejorará considerablemente tu rendimiento y tu técnica de natación. Los profesionales de fama internacional que asisten a Mireia te enseñan a perfeccionar esta técnica.
                     </p>
@@ -159,9 +204,50 @@
                 <button class="buttonAll">VER TODOS</button>
             </div>
         </div>
+        <div class="whiteContainerMobile">
+            <div class="lessonDiv">
+                <div>
+                    <h1>03</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Bases biomecánicas de la natación</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="lessonDiv">
+                <div>
+                    <h1>06</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Preparación física</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="lessonDiv">
+                <div>
+                    <h1>08</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Nutrición y suplementos</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="lessonDiv">
+                <div>
+                    <h1>11</h1>
+                </div>
+                <div class="infoDiv">
+                    <h3>Análisis de competición</h3>
+                </div>
+            </div>
+            <div class="divButton">
+                <button class="buttonAll">VER TODOS</button>
+                <button class="buttonAllMobile">VER TODOS</button>
+            </div>
+        </div>
     </section>
-    
-    <section class="otherCourses_container section">
+
+    <section class="otherCourses_container section" id="courses">
         <div>
             <h2>MÁS CURSOS</h2>
         </div>
@@ -178,17 +264,17 @@
                     <p>ENSENA&nbsp;<span>DESARROLLO PERSONAL</span></p>
                 </div>
             </div>
-            <div class="courseDiv" style="background-image: url('./img/Course03.png');">
+            <div class="courseDiv" style="background-image: url('./img/course04.png');">
                 <div class="courseInfoDiv">
-                    <h4>ISMAEL CALA</h4>
-                    <p>ENSENA&nbsp;<span>DESARROLLO PERSONAL</span></p>
+                    <h4>Lewis AMarante</h4>
+                    <p>ENSENA&nbsp;<span>MAQUILLAJE</span></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section_container section">
-        <div>
+    <section class="form_section" id="form">
+        <div class="form-section-title">
             <h2>OBTÉN MÁS INFORMACiÓN</h>
         </div>
         <form>
@@ -206,21 +292,20 @@
             <div class="containerCheckbox">
                 <label>
                     <input type="checkbox" name="terms" value="terms" class="custom-checkbox">
-                    <p>Acepto las <span>condiciones de uso</span> y <span>protección de datos.</span></p>
+                    <p class="checkbox-terms">Acepto las <span>condiciones de uso</span> y <span>protección de datos.</span></p>
                 </label>
                 <label>
                     <input type="checkbox" name="terms" value="terms" class="custom-checkbox">
-                    <p>Me gustaría recibir información sobre <br> nuevos cursos, ofertas y promociones</p>
+                    <p class="checkbox-terms">Me gustaría recibir información sobre <br> nuevos cursos, ofertas y promociones</p>
                 </label>
             </div>
         </form>
-        <div>
-            <button class="buttonMoreInfo">ENVIAR</button>
-        </div>
+
+            <button class="sendButton">ENVIAR</button>
 
     </section>
-
-    <section class="collumn_container section">
+     <!-- RESPONSIVENESS DONE UP TO THIS POINT -->
+    <section class="comment_section">
         <div>
             <h2 class="titleLessonContainer">COMENTARIOS DE LOS ESTUDIANTES</h2>
         </div>
@@ -306,6 +391,24 @@
         </div>
     </section>
 
+    <section class="comment-section-mobile">
+        <h2 class="titleLessonContainerMobile">COMENTARIOS DE LOS ESTUDIANTES</h2>
+        <div class="blackContainer">
+            <div class="statmentDiv">
+                <p>
+                    Ha sido un curso muy gratificante,en el que he podido aprender muchas cosas gracias a los grandes ponentes que han colaborado y aportado sus conocimientos. Ahora toca ponerse manos a la obra y poner en practica todo lo aprendido. Estoy muy orgulloso.
+                </p>     
+                <p class="statment-author">Samuel F.</p>
+            </div>
+            <div class="statmentDiv">
+                <p>
+                    Seguir creciendo como profesional es necesario pero si lo haces junto a tus ídolos se convierte en un placer. Gracias por esta experiencia y espero poder comentarlo en persona con sus protagonistas muy pronto.
+                </p>     
+                <p class="statment-author">Francisco S.</p>
+            </div>
+        </div>
+    </section>
+
     <article class="related-article section">
         <div>
             <h2>ARTÍCULOS RELACIONADOS</h2>
@@ -314,14 +417,17 @@
                 <div>
                     <h3>Consejos para nadadores principiantes</h3>
                     <caption>22.06.2019</caption>
+                    <hr class="articles-hr">
                 </div>
                 <div>
                     <h3>Consejos para nadadores principiantes</h3>
                     <caption>22.06.2019</caption>
+                    <hr class="articles-hr">
                 </div>
                 <div>
                     <h3>Consejos para nadadores principiantes</h3>
                     <caption>22.06.2019</caption>
+                    <hr class="articles-hr">
                 </div>
                 <div>
                     <h3>Consejos para nadadores principiantes</h3>
@@ -342,7 +448,20 @@
         <button class="blogButton">LEER MÁS EN NUESTRO BLOG</button>
     </section>
 
-    <footer class="section">
+    <section class="success-container-mobile section">
+        <div class="success-title-mobile">
+            <img src="./img/star-outline.png" alt="Success">
+            <h4>
+                Los estudiantes le dan a Unycos una calificación promedio de 4.7 de 5 estrellas. 
+            </h4>
+        </div>
+        <span>
+            100% de garantía de satisfacción. 30 días de garantía de devolución de dinero.
+        </span>
+        <button class="blogButton">LEER MÁS EN NUESTRO BLOG</button>
+    </section>
+
+    <footer class="footer">
         <div class="social-icons">
             <img src="./img/facebook.png" alt="Facebook">
             <img src="./img/instagram.png" alt="Instagram">
@@ -364,7 +483,45 @@
             </div>
         </div>
     </footer>
-    <script src="./js/animation.js"></script>
 
+    <footer class="footer-mobile">
+        <div class="social-container">
+            <h3>únete a la comunidad</h3>
+            <div class="social-icons">
+                <img src="./img/facebook.png" alt="Facebook">
+                <img src="./img/instagram.png" alt="Instagram">
+                <img src="./img/twitter.png" alt="Twitter">
+                <img src="./img/youtube.png" alt="Youtube">
+            </div>
+        </div>
+        <div class="social-container">
+            <h3>¿Dudas? Contáctanos por whatsapp</h3>
+            <div class="social-icons">
+                <button class="whatsButton">
+                    <img src="./img/whats.png" alt="Whatsapp">
+                    <p>
+                        +34 653 46 73 60
+                    </p>
+                </button>
+            </div>
+        </div>
+        
+        <div class="info-container">
+            <img src="./img/logo.png" alt="Lock">
+            <div class="currencys">
+                <p>USD ($)</p>
+                <p>/</p>
+                <p>EUR (€)</p>
+            </div>
+        </div>
+        <div class="terms-mobile">
+            <p>Terminos y condiciones</p>
+            <p>Política de privacidad</p>
+            <p>Aviso legal</p>
+        </div>
+        <div class="footer-spacer"></div>
+    </footer>
+    <script src="./js/animation.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
