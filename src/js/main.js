@@ -1,63 +1,57 @@
-const closeButton = document.getElementById('close-button');
+const aButton = document.getElementById('loginButton');
 const menuBar = document.getElementById('menu-bar');
-const personBtn = document.getElementById('person');
-const toggleIcon = document.getElementById('toggle');
-const loginContainer = document.getElementById('loginContainer');
-const submitBtn = document.getElementById('submit-btn');
-let menuBarVisible = false;
+const menuItems = menuBar.getElementsByTagName('p');
+const toggleMenu = document.getElementById('toggle-button');
 
 const user = JSON.parse(localStorage.getItem('user'));
-console.log(user);
+const isMobile = window.innerWidth < 768;
 
 if (user.loggedIn) {
   const registerLink = document.querySelector('a[href="./register.html"]');
   const loginLink = document.querySelector('a[href="./login.html"]');
   const navbar = document.querySelector('navbar');
-  
+  const togglePerson = document.getElementById('person');
+  const toggle = document.getElementById('toggle');
+
   if (registerLink) {
     navbar.removeChild(registerLink);
   }
-  
+
   if (loginLink) {
     const userName = user.name;
     const loginButton = loginLink.querySelector('p.navbar-item');
-    const aButton = document.getElementById('loginButton');
-    aButton.href = '#';
     loginButton.innerHTML = `Hola, <span class='username'>${userName}
     </span><img src='./img/down-outline.png'>`;
+    togglePerson.style.display = 'none';
+    toggle.style.display = 'flex';
+    toggleMenu.href = '#';
+    aButton.href = '#';
   }
 }
 
-personBtn.addEventListener('click', () => {
-    loginContainer.style.display = 'flex';
-});
+if (isMobile) {
+  toggleMenu.addEventListener('click', () => {
+    menuBar.style.display = menuBar.style.display === 'flex' ? 'none' : 'flex';
+  });
+} else {
+  aButton.addEventListener('click', () => {
+    menuBar.style.display = menuBar.style.display === 'flex' ? 'none' : 'flex';
+  });
+}
 
-toggleIcon.addEventListener('click', (event) => {
-    if (!menuBarVisible) {
-        menuBar.style.display = 'flex';
-        closeButton.style.display = 'flex';
-        menuBarVisible = true;
-        event.stopPropagation();
-    }
-});
+let selectedItem = null;
+  
+const handleClick = (item) => {
+  if (selectedItem) {
+      selectedItem.style.color = '';
+  }
+  const buttonColor = item;
+  buttonColor.style.color = '#C5AF19';
+  selectedItem = buttonColor;
+  };
 
-submitBtn.addEventListener('click', () => {
-    loginContainer.style.display = 'none';
-    personBtn.style.display = 'none';
-    toggleIcon.style.display = 'flex';
-    menuBarVisible = false;
-});
-
-closeButton.addEventListener('click', () => {
-    menuBar.style.display = 'none';
-    menuBarVisible = false;
-});
-
-document.addEventListener('click', (event) => {
-    if (menuBarVisible && !menuBar.contains(event.target)) {
-        menuBar.style.visibility = 'hidden';
-        closeButton.style.display = 'none';
-        console.log('clicked outside menuBar');
-        menuBarVisible = false;
-    }
-});
+  for (let i = 0; i < menuItems.length; i += 1) {
+  menuItems[i].addEventListener('click', () => {
+      handleClick(menuItems[i]);
+  });
+}
