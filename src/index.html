@@ -11,7 +11,7 @@
     <meta name="description" content="Discover a range of courses covering sports, from physical training to advanced strategies. Learn from experts and enhance your sports skills to excel in both practice and theoretical knowledge. Find the perfect course to fuel your passion for sports and reach new levels of performance." />
 
 </head>
-<body>
+<body id="body">
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="Logo Unyco">
@@ -20,9 +20,20 @@
             <p class="navbar-item">CURSOS</p>
             <p class="navbar-item">REGISTER</p>
             <p class="navbar-item">LOG IN</p>
-            <img class="toggle" src="img/toggle.png" alt="Search Icon">
+            <a id="toggle-button">
+                <img id="toggle" src="img/toggle.png" alt="Toggle Icon">
+                <img id="person" src="img/person-outline.svg" alt="Profile Icon">
+            </a>
         </navbar>
-        
+        <div id="menu-bar">
+            <img src='./img/logoblack.png'>
+            <a id="close-button"><p>X</p></a>
+        </div>
+        <div id="loginContainer">
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button id="submit-btn">LOG IN</button>
+        </div>
     </header>
     <div class="hero">
     </div>
@@ -479,12 +490,14 @@
             </div>
         </div>
         <div class="social-container">
-            <h3>únete a la comunidad</h3>
+            <h3>¿Dudas? Contáctanos por whatsapp</h3>
             <div class="social-icons">
-                <img src="./img/facebook.png" alt="Facebook">
-                <img src="./img/instagram.png" alt="Instagram">
-                <img src="./img/twitter.png" alt="Twitter">
-                <img src="./img/youtube.png" alt="Youtube">
+                <button class="whatsButton">
+                    <img src="./img/whats.png" alt="Whatsapp">
+                    <p>
+                        +34 653 46 73 60
+                    </p>
+                </button>
             </div>
         </div>
         
@@ -496,13 +509,14 @@
                 <p>EUR (€)</p>
             </div>
         </div>
-        <div class="terms">
+        <div class="terms-mobile">
             <p>Terminos y condiciones</p>
             <p>Política de privacidad</p>
             <p>Aviso legal</p>
         </div>
+        <div class="footer-spacer"></div>
     </footer>
     <script src="./js/animation.js"></script>
-
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -797,9 +797,67 @@ form {
   .navbar-item {
     display: none;
   }
-  .toggle {
+
+  #toggle {
+    display: none;
+  }
+
+  #person {
     display: flex;
   }
+
+  #menu-bar {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 58vh;
+    height: 100vh;
+    flex-shrink: 0;
+    background-color: white;
+    top: 0;
+    right: 0;
+  }
+  
+  #menu-bar img {
+    position: absolute;
+    top: 24px;
+    right: 70%;
+    width: 93.358px;
+    height: 24px;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+
+  #close-button{
+    position: absolute;
+    display: flex;
+    top: 18px;
+    right: 35%;
+    width: 93.358px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 25px;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+
+  #loginContainer {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+    min-height: 800px;
+    gap: 20px;
+    background-color: white;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+    z-index: 1;
+  }
+
   .hero {
     width: 100%;
     background: url("../img/heromobile.png"), black;
@@ -891,7 +949,7 @@ form {
     justify-content: center;
     align-items: center;
     color: white;
-    width: 368px;
+    width: 90%;
     height: 48px;
     border-radius: 4px;
     font-weight: 700;
@@ -1325,7 +1383,6 @@ form {
     height: auto;
     align-items: center;
     justify-content: center;
-    gap: 30px;
   }
 
   .footer-mobile h3 {
@@ -1349,6 +1406,49 @@ form {
     justify-content: center;
     width: 100%;
     gap: 20px;
+  }
+  .whatsButton{
+    display: flex;
+    width: 180px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: unset;
+    border-radius: 4px;
+    gap: 5px;
+    border: 2px solid var(--color-primary-dark-25, #D8D7CE);
+  }
+  .whatsButton p {
+    color: var(--color-primary-dark-25, #D8D7CE);
+    text-align: center;
+    font-size: 12px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .info-container{
+    width: 90%;
+    margin: 50px 10px 0 10px;
+  }
+
+  .terms-mobile{
+    display: flex;
+    width: 98%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-primary-dark-50, #858479);
+    text-align: center;
+    font-size: 10px;
+    font-family: Lato;
+    line-height: 16px;
+  }
+  .footer-spacer{
+    height: 20px;
   }
 }
 
