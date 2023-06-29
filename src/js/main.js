@@ -1,10 +1,6 @@
-const closeButton = document.getElementById('close-button');
+const aButton = document.getElementById('loginButton');
 const menuBar = document.getElementById('menu-bar');
-const personBtn = document.getElementById('person');
-const toggleIcon = document.getElementById('toggle');
-const loginContainer = document.getElementById('loginContainer');
-const submitBtn = document.getElementById('submit-btn');
-let menuBarVisible = false;
+const menuItems = menuBar.getElementsByTagName('p');
 
 const user = JSON.parse(localStorage.getItem('user'));
 console.log(user);
@@ -21,43 +17,31 @@ if (user.loggedIn) {
   if (loginLink) {
     const userName = user.name;
     const loginButton = loginLink.querySelector('p.navbar-item');
-    const aButton = document.getElementById('loginButton');
     aButton.href = '#';
     loginButton.innerHTML = `Hola, <span class='username'>${userName}
     </span><img src='./img/down-outline.png'>`;
   }
 }
 
-personBtn.addEventListener('click', () => {
-    loginContainer.style.display = 'flex';
-});
+aButton.addEventListener('click', () => {
+    menuBar.style.display = (menuBar.style.display === 'flex')
+      ? 'none'
+      : 'flex';
+  });
 
-toggleIcon.addEventListener('click', (event) => {
-    if (!menuBarVisible) {
-        menuBar.style.display = 'flex';
-        closeButton.style.display = 'flex';
-        menuBarVisible = true;
-        event.stopPropagation();
+  let selectedItem = null;
+  
+  const handleClick = (item) => {
+    if (selectedItem) {
+      selectedItem.style.color = ''; // Redefine a cor do item anterior
     }
-});
-
-submitBtn.addEventListener('click', () => {
-    loginContainer.style.display = 'none';
-    personBtn.style.display = 'none';
-    toggleIcon.style.display = 'flex';
-    menuBarVisible = false;
-});
-
-closeButton.addEventListener('click', () => {
-    menuBar.style.display = 'none';
-    menuBarVisible = false;
-});
-
-document.addEventListener('click', (event) => {
-    if (menuBarVisible && !menuBar.contains(event.target)) {
-        menuBar.style.visibility = 'hidden';
-        closeButton.style.display = 'none';
-        console.log('clicked outside menuBar');
-        menuBarVisible = false;
-    }
-});
+    const buttonColor = item;
+    buttonColor.style.color = '#C5AF19'; // Aplica a cor ao novo item selecionado
+    selectedItem = buttonColor; // Armazena o novo item selecionado
+  };
+  
+  for (let i = 0; i < menuItems.length; i += 1) {
+    menuItems[i].addEventListener('click', () => {
+      handleClick(menuItems[i]);
+    });
+  }
