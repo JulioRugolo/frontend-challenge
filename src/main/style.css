@@ -1206,6 +1206,20 @@ footer {
     height: 40px;
     margin-top: 10px;
   }
+/* 
+  .courseDiv{
+    opacity: 1;
+  } */
+
+  .inlineBlock {
+    width: 368px;
+    
+    flex-direction: column;
+  }
+
+  .inlineBlock > .courseDiv:nth-child(2) {
+    display: none;
+  } 
   .form-section-title {
     color: white;
   }
