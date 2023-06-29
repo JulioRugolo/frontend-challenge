@@ -56,6 +56,7 @@ submitButton.addEventListener('click', (event) => {
     name: nameInput.value,
     email: emailInput.value,
     password: passwordInput.value,
+    loggedIn: false,
   };
   localStorage.setItem('user', JSON.stringify(user));
 

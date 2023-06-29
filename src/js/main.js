@@ -7,8 +7,9 @@ const submitBtn = document.getElementById('submit-btn');
 let menuBarVisible = false;
 
 const user = JSON.parse(localStorage.getItem('user'));
+console.log(user);
 
-if (user) {
+if (user.loggedIn) {
   const registerLink = document.querySelector('a[href="./register.html"]');
   const loginLink = document.querySelector('a[href="./login.html"]');
   const navbar = document.querySelector('navbar');
