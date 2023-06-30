@@ -77,6 +77,10 @@ body {
   color: #C5AF19;
 }
 
+.menu-bar-mobile {
+  display: none;
+}
+
 header {
   display: flex;
   align-items: center;
