@@ -187,6 +187,7 @@
       line-height: 16px;
       text-transform: uppercase;
       color: #858479;
+      cursor: pointer;
     }
   
     #loginContainer {

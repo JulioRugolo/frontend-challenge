@@ -5,13 +5,14 @@ const menuItems = menuBar.getElementsByTagName('p');
 const toggleMenu = document.getElementById('toggle-button');
 const closeMenu = document.getElementById('close-btn');
 const notification = document.getElementById('notification');
-const logOut = document.getElementById('logout-btn');
+const logOut = document.getElementsByClassName('logout-btn');
 const bellOnSrc = './img/bell-on.png';
 const bellOffSrc = './img/bell-off.png';
+const logOutMobile = window.innerWidth < 768 ? logOut[1] : logOut[0];
 
 const user = JSON.parse(localStorage.getItem('user'));
 const isMobile = window.innerWidth < 768;
-if (localStorage.getItem('notification') === 'true') {
+if (localStorage.getItem('notification') === 'true' || localStorage.getItem('notification') === null) {
   notification.src = bellOnSrc;
 } else {
   notification.src = bellOffSrc;
@@ -102,9 +103,10 @@ notification.addEventListener('click', () => {
     notificationOn = true;
     localStorage.setItem('notification', true);
   }
-});
+}); 
 
-logOut.addEventListener('click', () => {
+logOutMobile.addEventListener('click', () => {
+  console.log('logout');
   const userLogout = {
     ...user,
     loggedIn: false,
