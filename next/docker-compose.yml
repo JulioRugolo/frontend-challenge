@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '9004:3000'
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npm run dev

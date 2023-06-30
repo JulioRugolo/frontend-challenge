@@ -1,47 +1,13 @@
+# Desafio Front-end 20200912
+Desafio técnico para oportunidade de Pessoa Front-End (Next.js).
 
-# Front end Challenge 20200912
-Desafio técnico para oportunidade de Pessoa Front-End (HTML / CSS / JS).
+## Descrição
 
-## Description
+Este repositório contém dois projetos: um em React e outro em HTML. O projeto HTML é a aplicação completa, enquanto o projeto Next.js mostra a renderização dinâmica de um conteúdo consumido de uma API.
 
-Projeto desenvolvido a partir de um protótipo do figma, utilizando HTML, CSS e JavaScript, tudo conteinerizado com Docker.
+## Instalação
 
-## Installation
-
-### English
-
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-
-   ```bash
-   git clone [repository_url]
-   ```
-
-2. Navigate to the project folder:
-
-   ```bash
-   cd frontend-challenge
-   ```
-
-3. Run the Docker Compose command to start the project:
-
-   ```bash
-   docker-compose up -d
-   ```
-
-   This command will build and start the necessary containers defined in the `docker-compose.yml` file in detached mode (`-d`). Make sure you have Docker and Docker Compose installed on your system.
-
-4. Access the application in your web browser:
-
-   ```
-   http://localhost:9004
-   ```
-
-
-### Português
-
-Para executar este projeto localmente, siga os seguintes passos:
+Para executar qualquer um dos projetos localmente, siga os seguintes passos:
 
 1. Clone o repositório:
 
@@ -49,22 +15,12 @@ Para executar este projeto localmente, siga os seguintes passos:
    git clone [repository_url]
    ```
 
-2. Acesse a pasta do projeto:
+2. Acesse a pasta do projeto desejado:
 
    ```bash
-   cd frontend-challenge
+   cd next # ou cd html
    ```
 
-3. Execute o comando Docker Compose para iniciar o projeto:
+3. Siga as instruções contidas no respectivo README dentro da pasta do projeto para instalar as dependências e iniciar o projeto.
 
-   ```bash
-   docker-compose up -d
-   ```
-
-   Este comando irá construir e iniciar os containers necessários definidos no arquivo `docker-compose.yml` em modo detached (`-d`). Certifique-se de ter o Docker e o Docker Compose instalados em seu sistema.
-
-4. Acesse a aplicação em seu navegador web:
-
-   ```
-   http://localhost:9004
-   ```
+Lembre-se de ter o Node.js e o npm instalados em seu sistema antes de executar os projetos.
