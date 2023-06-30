@@ -8,10 +8,12 @@ const getCountryCode = async () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
+      // const findCountry = data.find((country) => country.name.common === 'United States');
+      // console.log(findCountry);
   
       const dataNumber = data.map(({ idd, name }) => ({
         fullName: name.common,
-        iddNumber: idd.root + idd.suffixes,
+        iddNumber: Array.isArray(idd.suffixes) ? idd.root : idd.root + idd.suffixes,
       }));
   
       dataNumber
