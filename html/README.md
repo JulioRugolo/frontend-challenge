@@ -21,7 +21,7 @@ To run this project locally, follow these steps:
 2. Navigate to the project folder:
 
    ```bash
-   cd frontend-challenge
+   cd html
    ```
 
 3. Run the Docker Compose command to start the project:
@@ -52,7 +52,7 @@ Para executar este projeto localmente, siga os seguintes passos:
 2. Acesse a pasta do projeto:
 
    ```bash
-   cd frontend-challenge
+   cd html
    ```
 
 3. Execute o comando Docker Compose para iniciar o projeto:
