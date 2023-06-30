@@ -6,6 +6,9 @@ Desafio técnico para oportunidade de Pessoa Front-End (HTML / CSS / JS).
 
 Projeto desenvolvido a partir de um protótipo do figma, utilizando HTML, CSS e JavaScript, tudo conteinerizado com Docker.
 
+## Live view
+https://rugolo-frontend-challenge.vercel.app/
+
 ## Installation
 
 ### English
